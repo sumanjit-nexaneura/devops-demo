@@ -10,7 +10,7 @@ function createApp() {
 
     // Sample route.
     app.get('/', (req, res) => {
-        res.json({ message: 'Hello from DevOps Demo' });
+        res.json({ message: 'Hello from DevOps Demo V2' });
     });
 
     return app;
