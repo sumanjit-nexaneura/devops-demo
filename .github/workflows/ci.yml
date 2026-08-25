@@ -1,12 +1,12 @@
 name: CI
 
-# Runs on every pull request to main, and on pushes to main.
+# Runs on every pull request to UAT or main
 # This is the CI half of the pipeline: lint -> test -> build image -> scan.
 on:
     pull_request:
-        branches: [main]
+        branches: [UAT, main]
     push:
-        branches: [main]
+        branches: [UAT, main]
 
 jobs:
     build-and-test:
