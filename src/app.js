@@ -1,4 +1,5 @@
 const express = require('express');
+const statusRoutes = require('./routes/status');
 
 function createApp() {
     const app = express();
@@ -12,6 +13,9 @@ function createApp() {
     app.get('/', (req, res) => {
         res.json({ message: 'Hello from DevOps Demo V2' });
     });
+
+    // Application routes.
+    app.use('/api', statusRoutes);
 
     return app;
 }
